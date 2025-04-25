@@ -15,18 +15,29 @@ function proportionScreen(height, speed) {
     PAGE_WIDTH = height * 1.25;
     BG_CENTER_H = height / 2;
     BG_CENTER_W = PAGE_WIDTH / 2 - 120;
+<<<<<<< HEAD
+=======
+    GRAVITY = 500;
+>>>>>>> 21cdfb52a91f3c68764f850c57aa20c57affbf28
     VERTICAL_SPEED_UP = -speed
     VERTICAL_SPEED_DOWN = speed*2
     HORIZONTAL_SPEED_LEFT = -speed
     HORIZONTAL_SPEED_RIGHT = speed
 }
 
+<<<<<<< HEAD
 proportionScreen(900, 240)
 
 //Objetos do jogo
 let bombs;
 
 
+=======
+//Objetos do jogo
+
+
+proportionScreen(900, 240)
+>>>>>>> 21cdfb52a91f3c68764f850c57aa20c57affbf28
 
 const config = {
     type: Phaser.AUTO,
@@ -52,7 +63,10 @@ function preload ()
 {
     this.load.image('sky', './assets/images/background.png');
     this.load.image('ufo', './assets/images/ufo.png');
+<<<<<<< HEAD
     this.load.image('bombs', './assets/images/bomb.png')
+=======
+>>>>>>> 21cdfb52a91f3c68764f850c57aa20c57affbf28
 
     
 }
@@ -61,6 +75,7 @@ function create ()
 {
     background = this.add.image(BG_CENTER_H, BG_CENTER_W, 'sky');
 
+<<<<<<< HEAD
     bombs = this.physics.add.image(900, 300, 'bombs');
     bombs.setScale(0.12)
     bombs.setVelocityX(-800);
@@ -79,6 +94,15 @@ function create ()
         bombs.disableBody(true, true)
     }
 
+=======
+
+    ufo = this.physics.add.image(150, 200, 'ufo');
+    ufo.setScale(0.12);
+
+    ufo.setCollideWorldBounds(true);
+    ufo.set
+    
+>>>>>>> 21cdfb52a91f3c68764f850c57aa20c57affbf28
 }
 
 function update ()
